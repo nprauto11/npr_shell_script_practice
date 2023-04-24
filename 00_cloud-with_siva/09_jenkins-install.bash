@@ -33,10 +33,10 @@ VALIDATE $? "Installing Java (Open-jdk"
 sudo apt-get install jenkins -y 
 VALIDATE $? "Installing Jenkins"
 
-systemctl start jenkins
-VALIDATE $? "Jenkins Service Starting"
-
 systemctl enable jenkins
 VALIDATE $? "Jenkins Service Enabling"
+
+systemctl status jenkins
+VALIDATE $? "Jenkins Service Status"
 
 
