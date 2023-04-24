@@ -1,4 +1,22 @@
 
+
+#!/bin/bash --> shebang 
+  shebang should be the 1st line of script, it is the path of the interpreter/executor 
+  
+  
+Variables
+##########
+1. variable is used to store value 
+2. variables are useful to store dynamic data means changing value  
+
+requirement
+-----------
+a. store values into variable and display it
+b. pass the values/arguments to script, print it 
+c. need to execute the command in shell script and take the output into variable 
+d. user need to enter data when asked and stored inside variable 
+e. 
+
 (*) Exit status
 ###############
 $? = 0      --> success 
@@ -10,8 +28,6 @@ it is our responsiblity to check exit status and proceed
 
 Scenario:  Git installtion 
 ========
-
-
 steps:
 -----
 1. check user id. if user id is 0 then he is root user 
