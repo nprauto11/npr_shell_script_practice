@@ -1,0 +1,3 @@
+/tmp/raju.txt 
+/var/log/message
+/opt/abc.sh 
