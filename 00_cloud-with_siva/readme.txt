@@ -35,16 +35,34 @@ steps:
   function_name 
   
   
-scenario: Jenkins installation 
-========
-here we are going to use, what we learned till now 
+
+now,here we are going to use, what we learned till now 
  i.e variables
      exit status 
 	 conditions 
 	 function 
+	 
+	 
+scenario: Jenkins installation 
+========
 
-
-
-
-
-
+steps:
+-----
+1. check user is root or not 
+2. if not root, exit user  
+3. curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key |  tee \
+    /usr/share/keyrings/jenkins-keyring.asc > /dev/null
+4.  echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
+    https://pkg.jenkins.io/debian-stable binary/ | tee \
+    /etc/apt/sources.list.d/jenkins.list > /dev/null
+5. check this command is success or not using exit status	
+6. apt-get update -y
+7. check this command is success or not using exit status
+8. apt-get install fontconfig openjdk-11-jre -y
+9. check this command is success or not using exit status
+10. sudo apt-get install jenkins -y 
+11. check this command is success or not using exit status
+12. systemctl start jenkins
+13. check this command is success or not using exit status
+14. systemctl enable jenkins
+15. check this command is success or not using exit status
