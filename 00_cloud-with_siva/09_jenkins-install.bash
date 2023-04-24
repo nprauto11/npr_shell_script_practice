@@ -9,7 +9,7 @@ else
 fi 
 }
 
-USERD=$(id -u)
+USERID=$(id -u)
 
 if [ $USERID -ne 0 ]; then 
 	echo "You need to be root user to execute this script"
